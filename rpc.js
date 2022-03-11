@@ -24,5 +24,13 @@ return output;
 function game(){
 p = playerPlay();
 c = computerPlay();
-
+if (c==p){
+    console.log("its a tie! you both selected " + p)
+}
+else if ((p=="Rock" && c=="Scissors") || (p=="Scissors" && c=="Paper") || (p=="Paper" && c=="Rock")){
+    console.log("You win! " + p + " beats " + c + "!");
+}
+else{
+    console.log("You lose! " + c + " beats " + p + "!")
+}
 }
